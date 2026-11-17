@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utter, koin lahir dari satu pesan</title>
+<meta name="description" content="Utter melahirkan koin dari satu pesan chat di Ammora, GIWA Sepolia. Satu pesan berisi nama dan ticker menjadi koin on-chain dengan aturan yang terkunci di rantai.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <span class="logo">utter<span class="dot">.</span></span>
+    <span class="tagline">koin lahir dari satu pesan</span>
+    <span class="netbadge">GIWA Sepolia, testnet</span>
+  </header>
+
+  <h1>Satu pesan. Satu koin.</h1>
+  <p class="sub">Kirim pesan berisi nama dan ticker ke bot Utter, dan koinnya lahir di rantai dengan pembelian pertama otomatis, aturan fee yang jelas, dan janji yang terkunci di kontrak. Tanpa formulir panjang, tanpa deploy manual.</p>
+
+  <section class="card" aria-label="Cara kerja">
+    <h2>Cara Kerja</h2>
+    <ul class="plain">
+      <li>Kirim perintah launch ke bot Telegram Utter: nama koin, ticker, deskripsi singkat.</li>
+      <li>Utter memeriksa aturan, mensimulasikan transaksi, lalu melahirkan koin lewat Config 49 di Ammora.</li>
+      <li>Dompet peluncur membeli pertama 0,001 ETH. Kamu menerima balasan berisi alamat token dan tautan halaman koin.</li>
+      <li>Halaman koin menampilkan kwitansi kelahiran, meteran kelulusan, dan janji yang terkunci di rantai.</li>
+    </ul>
+  </section>
+
+  <section aria-label="Koin yang sudah lahir">
+    <h2>Koin yang Sudah Lahir</h2>
+    <div class="coin-list">
+      <a class="coin-card" href="c/0xaf10bb75bb295e4b9c59da2820bf198fdaf82efb/">
+        <span class="nm">Koin Fajar <span class="ticker-chip">FAJR</span></span>
+        <div class="mt">0xAf10bb75Bb295e4B9c59Da2820bf198FdAE82efB, lahir di blok 41.584.173, terkumpul 0,00099 dari 0,05 ETH menuju kelulusan</div>
+      </a>
+    </div>
+  </section>
+
+  <p class="foot">Utter berjalan di GIWA Sepolia, jaringan uji. Token di situs ini adalah token testnet dan tidak punya nilai uang. <span data-latest-block></span></p>
+</div>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

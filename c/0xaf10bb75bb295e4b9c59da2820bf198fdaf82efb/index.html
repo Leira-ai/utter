@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Koin Fajar (FAJR) di Utter</title>
+<meta name="description" content="Kwitansi kelahiran, aturan main, meteran kelulusan, dan janji terkunci Koin Fajar (FAJR), koin pertama yang lahir lewat Utter di GIWA Sepolia.">
+<link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <span class="logo">utter<span class="dot">.</span></span>
+    <span class="tagline">koin lahir dari satu pesan</span>
+    <span class="netbadge">GIWA Sepolia, testnet</span>
+  </header>
+
+  <h1>Koin Fajar <span class="ticker-chip">FAJR</span></h1>
+  <p class="sub">koin uji irisan satu utter. Lahir dari satu pesan Telegram lewat Utter, di jaringan uji GIWA Sepolia.</p>
+
+  <section class="card" aria-label="Kwitansi kelahiran">
+    <h2>Kwitansi Kelahiran</h2>
+    <dl class="kv">
+      <dt>Alamat token</dt>
+      <dd><span class="mono">0xAf10bb75Bb295e4B9c59Da2820bf198FdAE82efB</span><button class="copy-btn" data-copy="0xAf10bb75Bb295e4B9c59Da2820bf198FdAE82efB">Salin</button></dd>
+      <dt>Alamat kurva</dt>
+      <dd><span class="mono">0x585E541D51D6689e322322b38Ca64d48D8c076d7</span><button class="copy-btn" data-copy="0x585E541D51D6689e322322b38Ca64d48D8c076d7">Salin</button></dd>
+      <dt>Transaksi lahir</dt>
+      <dd><a class="mono" href="https://sepolia-explorer.giwa.io/tx/0xf11cf1ef96d53319f67b08e0b19f724685f1a251da29808e1f5cfdfd9858ff13">0xf11cf1ef96d53319f67b08e0b19f724685f1a251da29808e1f5cfdfd9858ff13</a></dd>
+      <dt>Blok lahir</dt>
+      <dd>41.584.173, status <span class="status-ok">sukses</span></dd>
+      <dt>Dompet peluncur</dt>
+      <dd><span class="mono">0xdbC9069FB67f0923095C4036a79F7575183E3E2B</span></dd>
+      <dt>Pembelian pertama</dt>
+      <dd>0,001 ETH oleh dompet peluncur, menerima 48.072.254,05385724 FAJR sesudah fee kurva 1 persen</dd>
+      <dt>Total suplai</dt>
+      <dd>1.500.000.000 FAJR (9 desimal)</dd>
+      <dt>Status kurva</dt>
+      <dd>Aktif, fee trading saat ini 1 persen</dd>
+    </dl>
+  </section>
+
+  <section class="card" aria-label="Meteran kelulusan">
+    <h2>Meteran Kelulusan</h2>
+    <div class="meter" role="img" aria-label="Terkumpul 0,00099 ETH dari ambang kelulusan 0,05 ETH, yaitu 1,98 persen"><i style="width:1.98%"></i></div>
+    <div class="meter-note"><span>Terkumpul <b>0,00099 ETH</b></span><span>Ambang lulus <b>0,05 ETH</b></span><span><b>1,98%</b></span></div>
+    <p class="sub" style="margin-top:10px">Begitu cadangan kurva mencapai 0,05 ETH, koin lulus: likuiditas pindah ke pool permanen dan kunci LP serta vesting kreator mulai berjalan. Angka ini snapshot bacaan rantai pada blok 41.584.456.</p>
+  </section>
+
+  <section class="card" aria-label="Aturan main">
+    <h2>Aturan Main (Resep v1 Utter)</h2>
+    <ul class="plain">
+      <li>Setiap koin Utter lahir dengan suplai tetap 1.500.000.000 token. Tidak ada cetak ulang.</li>
+      <li>Dompet peluncur selalu membeli pertama sebesar 0,001 ETH, supaya koin tidak pernah lahir kosong.</li>
+      <li>Fee trading di kurva 1 persen. Dari fee di luar bagian protokol, kreator menerima 80 persen dan partner 20 persen.</li>
+      <li>Sesudah lulus, likuiditas dikunci permanen: 62,5 persen bagian partner dan 37,5 persen bagian kreator tidak bisa ditarik.</li>
+      <li>Bagian kreator yang terkunci di kurva, sekitar 11,1 persen suplai, terkunci penuh 30 hari sesudah kelulusan, lalu cair bertahap selama 6 bulan.</li>
+      <li>Semua angka di halaman ini dibaca dari kontrak di rantai, bukan dari janji lisan.</li>
+    </ul>
+  </section>
+
+  <section class="card" aria-label="Janji terkunci">
+    <h2>Janji Terkunci di Rantai</h2>
+    <dl class="kv">
+      <dt>Config Utter</dt>
+      <dd>ID 49 di registry Ammora, resep v1 yang sama untuk semua koin Utter</dd>
+      <dt>Bagi fee non-protokol</dt>
+      <dd>Kreator 80 persen, partner 20 persen (terbaca: creatorShareOfNonProtocolBps 8000)</dd>
+      <dt>Kunci LP permanen</dt>
+      <dd>Partner 62,5 persen, kreator 37,5 persen (terbaca: 6250 dan 3750 bps)</dd>
+      <dt>Vesting kreator</dt>
+      <dd>Cliff 30 hari, lalu 6 periode bulanan (terbaca: cliffDuration 2592000 detik, 6 periode)</dd>
+      <dt>Ambang kelulusan</dt>
+      <dd>0,05 ETH cadangan quote (terbaca: migrationQuoteThreshold 50000000000000000)</dd>
+      <dt>Biaya buat pool</dt>
+      <dd>0 (terbaca: poolCreationFee 0)</dd>
+      <dt>Fee vault kurva</dt>
+      <dd><span class="mono">0x414Be4a093fDFd7292dCa95C4D6fdD3905Ee6800</span></dd>
+      <dt>Penerima partner</dt>
+      <dd><span class="mono">0x193dd813ef15e67cBA573D92C2D834f20d2541e7</span></dd>
+    </dl>
+  </section>
+
+  <p class="foot">Data halaman ini snapshot bacaan rantai GIWA Sepolia pada blok 41.584.456. <span data-latest-block></span> Ini jaringan uji (testnet): token di halaman ini tidak punya nilai uang. Explorer: <a href="https://sepolia-explorer.giwa.io/address/0xAf10bb75Bb295e4B9c59Da2820bf198FdAE82efB">halaman token di explorer</a>.</p>
+</div>
+<script src="../../assets/app.js" defer></script>
+</body>
+</html>
